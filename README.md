@@ -51,17 +51,21 @@ pnpm run start
 ```
 
 Project Structure
-text
+
+```bash
 src/
-├── app.ts # Express application setup
-├── server.ts # HTTP server and entry point
-├── socket.ts # Socket.IO configuration
-├── types/ # TypeScript interfaces
+├── app.ts
+├── server.ts
+├── socket.ts
+├── types/
 │ └── index.ts
 └── routes/
-└── tickets.ts # Ticket related routes
+└── tickets.ts
+```
+
 API Endpoints
-Tickets
+
+```bash
 POST /tickets/book - Book a ticket (User only)
 
 POST /tickets/refund - Request refund (User only)
@@ -69,12 +73,14 @@ POST /tickets/refund - Request refund (User only)
 POST /tickets/reissue - Request reissue (User only)
 
 PUT /tickets/:id/status - Approve/reject ticket (Admin only)
+```
 
-WebSocket Events
-register - Register user with Socket.IO
+## WebSocket Events
 
-notification - Receive new notifications
+### register - Register user with Socket.IO
 
-notifications - Get all notifications
+- notification - Receive new notifications
 
-markAsRead - Mark notification as read
+- notifications - Get all notifications
+
+- markAsRead - Mark notification as read
